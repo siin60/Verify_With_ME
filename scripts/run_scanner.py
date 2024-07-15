@@ -53,6 +53,8 @@ while True:
             print("Invalid entry or the email address does not exist. Please check and try again.")
     except (ValidateApiException, SecurityApiException) as e:
         if isinstance(e, ValidateApiException) and e.status == 401:
-            print("Unauthorised request. Please check your API key.")
+            print("Unauthorised request. Please check your API key and/or your input.")
+        elif isinstance(e, ValidateApiException) and e.status == 503:
+            print("Unauthorised request. Please check your API key and/or your input.")
         else:
             print(f"Exception when calling the API: {e}")
