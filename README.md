@@ -11,9 +11,36 @@ This Python package performs non-intrusive vulnerability scanning and enumeratio
 
 ## Setup
 
-1. Clone this repository.
-2. Install the dependencies using `pip install -r requirements.txt`.
-3. Run the scanner using `python scripts/run_scanner.py`.
+1. Clone this repository into a separate folder (e.g., `Verify_With_ME`):
+    ```sh
+    git clone https://github.com/siin60/Verify_With_ME.git Verify_With_ME
+    cd Verify_With_ME
+    ```
+
+2. Create a virtual environment:
+    ```sh
+    python3 -m venv .venv
+    ```
+
+3. Activate the virtual environment:
+    - On macOS and Linux:
+      ```sh
+      source .venv/bin/activate
+      ```
+    - On Windows:
+      ```sh
+      .venv\Scripts\activate
+      ```
+
+4. Install the dependencies:
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+5. Install the `cloudmersive-validate-api-client` module:
+    ```sh
+    pip install cloudmersive-validate-api-client
+    ```
 
 ## API Key
 
